@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#2F6BFF" />
+<title>技术支持 · 序日</title>
+<meta name="description" content="序日的技术支持与常见问题：数据保存位置、备份与恢复、提醒、照片、小组件与隐私说明。" />
+<link rel="canonical" href="https://auroraapp.cn/support.html" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%232F6BFF'/%3E%3Cpath d='M5 15.5 9 9l3.5 4.5L15 8l4 7.5' stroke='white' stroke-width='2.2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+<style>
+  :root {
+    --canvas: #ffffff;
+    --bg: #f6f8fc;
+    --ink: #101f47;
+    --ink-soft: #5a6480;
+    --line: #e5e9f2;
+    --accent: #2F6BFF;
+    --card: #ffffff;
+    --shadow: 0 4px 18px rgba(16, 31, 71, .05);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .skip-link {
+    position: absolute; left: -9999px; top: 0;
+    background: var(--accent); color: #fff; padding: 10px 16px; z-index: 100;
+  }
+  .skip-link:focus { left: 8px; top: 8px; border-radius: 8px; }
+
+  .site-header {
+    background: var(--canvas);
+    border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; z-index: 20;
+  }
+  .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  .header-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    min-height: 64px; gap: 16px;
+  }
+  .logo { display: inline-flex; align-items: center; gap: 9px; color: var(--ink); }
+  .logo:hover { text-decoration: none; }
+  .logo-mark {
+    width: 28px; height: 28px; border-radius: 8px;
+    background: var(--accent); color: #fff;
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  .logo-mark svg { width: 17px; height: 17px; }
+  .logo-text { font-size: 17px; font-weight: 650; letter-spacing: .02em; }
+  .nav-list { list-style: none; display: flex; gap: 20px; font-size: 15px; }
+  .nav-list a { color: var(--ink-soft); }
+  .nav-list a[aria-current="page"] { color: var(--accent); font-weight: 600; }
+
+  main { padding: 40px 0 72px; }
+  .doc {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 40px 36px 44px;
+    box-shadow: var(--shadow);
+  }
+  .eyebrow {
+    font-size: 13px; letter-spacing: .1em; color: var(--accent);
+    text-transform: uppercase; font-weight: 600; margin-bottom: 10px;
+  }
+  .section-title { font-size: 30px; font-weight: 700; letter-spacing: -.01em; line-height: 1.3; }
+  .doc-meta { margin-top: 10px; font-size: 14px; color: var(--ink-soft); }
+  .doc h2 {
+    font-size: 19px; font-weight: 650; margin: 40px 0 12px;
+    padding-left: 12px; border-left: 4px solid var(--accent); line-height: 1.45;
+  }
+  .doc h3 { font-size: 16px; font-weight: 650; margin: 20px 0 6px; }
+  .doc p { margin-bottom: 13px; font-size: 16px; }
+  .doc ul { margin: 0 0 14px 22px; }
+  .doc li { margin-bottom: 7px; font-size: 16px; }
+  .doc strong { font-weight: 650; }
+  .callout {
+    background: #f2f6ff; border: 1px solid var(--line);
+    border-radius: 14px; padding: 18px 20px; margin: 22px 0 4px;
+  }
+  .callout p:last-child { margin-bottom: 0; }
+  .faq { border-top: 1px solid var(--line); padding-top: 18px; margin-top: 18px; }
+  .faq:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+  footer.doc-footer {
+    margin-top: 44px; padding-top: 22px;
+    border-top: 1px solid var(--line);
+    font-size: 13.5px; color: var(--ink-soft); line-height: 2;
+  }
+  footer.doc-footer a { color: var(--ink-soft); text-decoration: underline; }
+  .doc-back { display: inline-block; margin-top: 30px; font-size: 15px; }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --canvas: #0d1730; --bg: #0a1226; --ink: #f3efe6; --ink-soft: #98a3bd;
+      --line: #23304d; --card: #111c38; --shadow: none;
+    }
+    .callout { background: #16223f; }
+  }
+  @media (max-width: 600px) {
+    .doc { padding: 28px 20px 32px; border-radius: 14px; }
+    .container { padding: 0 16px; }
+    .section-title { font-size: 25px; }
+    .nav-list { gap: 14px; font-size: 14px; }
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要内容</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html" aria-label="序日首页">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M5 15.5 9 9l3.5 4.5L15 8l4 7.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <span class="logo-text">序日</span>
+    </a>
+    <nav aria-label="主导航">
+      <ul class="nav-list">
+        <li><a href="index.html">返回首页</a></li>
+        <li><a href="support.html" aria-current="page">技术支持</a></li>
+        <li><a href="privacy.html">隐私政策</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="container">
+    <div class="doc">
+      <p class="eyebrow">帮助与反馈</p>
+      <h1 class="section-title">技术支持</h1>
+      <p class="doc-meta">适用于「序日」iOS 应用 ｜ 最后更新：2026 年 9 月 24 日</p>
+
+      <div class="callout">
+        <p><strong>需要帮助？</strong>请发邮件至 <a href="mailto:zzcoming11@gmail.com">zzcoming11@gmail.com</a>。为了更快定位问题，建议在邮件中附上：设备型号与 iOS 版本、「序日」版本号（App 内「我的 → 关于」可查看）、问题出现的步骤，以及截图或录屏。</p>
+      </div>
+
+      <h2>常见问题</h2>
+
+      <div class="faq">
+        <h3>我的卡片和日记保存在哪里？</h3>
+        <p>全部保存在你自己的设备上。序日没有账号体系，也不联网，因此不会上传、不会云端同步；我们无法查看或恢复你设备上的内容。</p>
+      </div>
+
+      <div class="faq">
+        <h3>换手机时怎么把数据带过去？</h3>
+        <p>在旧设备上使用「我的 → 数据与备份 → 导出数据」生成 JSON 备份文件，把它保存或传输到新设备，再用「导入数据」选择该文件。导入前会先显示预览，你可以选择合并或覆盖导入。</p>
+      </div>
+
+      <div class="faq">
+        <h3>卸载 App 后数据还能找回吗？</h3>
+        <p>序日本身不提供云端备份，因此无法由我们为你恢复数据。卸载时序日的本地数据会从设备中删除；如果你曾开启并保留过系统备份（如 iCloud 备份或电脑备份），可以尝试通过系统备份恢复。需要确保记录留存时，最稳妥的做法是在卸载前先导出 JSON 备份。</p>
+      </div>
+
+      <div class="faq">
+        <h3>日记误删了，可以恢复吗？</h3>
+        <p>可以。删除的日记会先进入回收箱并保留 30 天，在此期间你可以在「日记 → 回收箱」将其恢复。超过保留期或在回收箱中执行永久删除后，将无法找回。</p>
+      </div>
+
+      <div class="faq">
+        <h3>提醒没有响，怎么排查？</h3>
+        <ul>
+          <li>确认 App 内的提醒开关已打开，且提醒时间设置正确。</li>
+          <li>在 iOS「设置 → 通知 → 序日」中确认已允许通知，并检查是否开启了专注模式或免扰时间。</li>
+          <li>提醒由设备本地生成，不依赖网络；若刚重装 App，请重新开启提醒。</li>
+        </ul>
+      </div>
+
+      <div class="faq">
+        <h3>为什么添加照片时系统提示相机或相册？</h3>
+        <p>拍摄日记照片需要相机权限；从相册选图使用系统照片选择器，只会读取你本次明确选中的图片，序日不会获得你整个相册的访问权限。照片仅保存在 App 本地存储中，不会上传，也不会自动写入系统相册。你可以随时在系统设置中关闭这些权限。</p>
+      </div>
+
+      <div class="faq">
+        <h3>主屏幕小组件没有及时更新？</h3>
+        <p>小组件显示的是设备本地数据的快照，由系统按自身的刷新节奏更新。打开一次 App 或完成打卡后，数据通常会在稍后刷新。</p>
+      </div>
+
+      <div class="faq">
+        <h3>App 会收集我的数据或显示广告吗？</h3>
+        <p>不会。序日不含统计分析、广告或第三方追踪组件，也不收集你的任何个人信息。详细说明见 <a href="privacy.html">隐私政策</a>。</p>
+      </div>
+
+      <h2>版本与联系方式</h2>
+      <p>「序日」的版本号与备案信息可在 App 内「我的 → 关于」查看。</p>
+      <ul>
+        <li>技术支持邮箱：<a href="mailto:zzcoming11@gmail.com">zzcoming11@gmail.com</a></li>
+        <li>隐私政策：<a href="privacy.html">https://auroraapp.cn/privacy.html</a></li>
+      </ul>
+
+      <h2>备案信息</h2>
+      <p>本 App 已按国家规定完成备案，备案号：<strong>鲁ICP备2026056464号-1A</strong></p>
+      <p>备案查询：<a href="https://beian.miit.gov.cn" target="_blank" rel="noopener">https://beian.miit.gov.cn</a></p>
+
+      <footer class="doc-footer">
+        序日 · Support<br />
+        <a href="privacy.html">隐私政策</a> · <a href="support.html">技术支持</a>
+      </footer>
+
+      <p><a class="doc-back" href="index.html">← 返回首页</a></p>
+    </div>
+  </div>
+</main>
+</body>
+</html>

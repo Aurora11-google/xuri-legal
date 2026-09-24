@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#2F6BFF" />
+<title>序日 · 应用信息</title>
+<meta name="description" content="序日：打卡、纪念日与日记三合一。本页提供隐私政策与技术支持入口，并公示备案信息。" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%232F6BFF'/%3E%3Cpath d='M5 15.5 9 9l3.5 4.5L15 8l4 7.5' stroke='white' stroke-width='2.2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+<style>
+  :root {
+    --canvas: #ffffff;
+    --bg: #f6f8fc;
+    --ink: #101f47;
+    --ink-soft: #5a6480;
+    --line: #e5e9f2;
+    --accent: #2F6BFF;
+    --card: #ffffff;
+    --shadow: 0 4px 18px rgba(16, 31, 71, .05);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .skip-link {
+    position: absolute; left: -9999px; top: 0;
+    background: var(--accent); color: #fff; padding: 10px 16px; z-index: 100;
+  }
+  .skip-link:focus { left: 8px; top: 8px; border-radius: 8px; }
+  .site-header {
+    background: var(--canvas);
+    border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; z-index: 20;
+  }
+  .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  .header-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    min-height: 64px; gap: 16px;
+  }
+  .logo { display: inline-flex; align-items: center; gap: 9px; color: var(--ink); }
+  .logo:hover { text-decoration: none; }
+  .logo-mark {
+    width: 28px; height: 28px; border-radius: 8px;
+    background: var(--accent); color: #fff;
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  .logo-mark svg { width: 17px; height: 17px; }
+  .logo-text { font-size: 17px; font-weight: 650; letter-spacing: .02em; }
+  .nav-list { list-style: none; display: flex; gap: 20px; font-size: 15px; }
+  .nav-list a { color: var(--ink-soft); }
+  .nav-list a[aria-current="page"] { color: var(--accent); font-weight: 600; }
+  main { padding: 40px 0 72px; }
+  .doc {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 40px 36px 44px;
+    box-shadow: var(--shadow);
+  }
+  .eyebrow {
+    font-size: 13px; letter-spacing: .1em; color: var(--accent);
+    text-transform: uppercase; font-weight: 600; margin-bottom: 10px;
+  }
+  .section-title { font-size: 30px; font-weight: 700; letter-spacing: -.01em; line-height: 1.3; }
+  .doc-meta { margin-top: 10px; font-size: 14px; color: var(--ink-soft); }
+  .doc p { margin-bottom: 13px; font-size: 16px; }
+  .doc ul { margin: 0 0 14px 22px; }
+  .doc li { margin-bottom: 7px; font-size: 16px; }
+  .entry-list { list-style: none; margin: 26px 0 8px; }
+  .entry-list li { margin-bottom: 12px; }
+  .entry {
+    display: block; padding: 18px 20px;
+    border: 1px solid var(--line); border-radius: 14px; background: #fff;
+    color: var(--ink);
+  }
+  .entry:hover { text-decoration: none; border-color: var(--accent); }
+  .entry-title { font-size: 16px; font-weight: 650; }
+  .entry-desc { font-size: 14px; color: var(--ink-soft); margin-top: 3px; }
+  footer.doc-footer {
+    margin-top: 44px; padding-top: 22px;
+    border-top: 1px solid var(--line);
+    font-size: 13.5px; color: var(--ink-soft); line-height: 2;
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要内容</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html" aria-label="序日首页">
+      <span class="logo-mark">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 15.5 9 9l3.5 4.5L15 8l4 7.5" stroke="white" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <span class="logo-text">序日</span>
+    </a>
+    <nav aria-label="主要导航">
+      <ul class="nav-list">
+        <li><a href="index.html" aria-current="page">首页</a></li>
+        <li><a href="support.html">技术支持</a></li>
+        <li><a href="privacy.html">隐私政策</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <div class="container">
+    <div class="doc">
+      <p class="eyebrow">序日</p>
+      <h1 class="section-title">打卡、纪念日与日记</h1>
+      <p class="doc-meta">纯本地存储 · 免费下载 · 无账号 · 无广告</p>
+
+      <p>序日把计划、坚持与心情按你自己的顺序排好。所有记录只保存在你的设备上，不联网、不收集数据，删除 App 即彻底删除。</p>
+
+      <ul class="entry-list">
+        <li>
+          <a class="entry" href="privacy.html">
+            <span class="entry-title">隐私政策</span>
+            <span class="entry-desc">说明序日不收集哪些信息、数据存在哪里、系统权限如何使用</span>
+          </a>
+        </li>
+        <li>
+          <a class="entry" href="support.html">
+            <span class="entry-title">技术支持与常见问题</span>
+            <span class="entry-desc">备份与恢复、提醒、照片、小组件与本机数据的常见问题</span>
+          </a>
+        </li>
+      </ul>
+
+      <footer class="doc-footer">
+        序日 · 已按国家规定完成 App 备案，备案号：<strong>鲁ICP备2026056464号-1A</strong><br />
+        备案查询：<a href="https://beian.miit.gov.cn" target="_blank" rel="noopener">https://beian.miit.gov.cn</a><br />
+        联系邮箱：<a href="mailto:zzcoming11@gmail.com">zzcoming11@gmail.com</a>
+      </footer>
+    </div>
+  </div>
+</main>
+</body>
+</html>
